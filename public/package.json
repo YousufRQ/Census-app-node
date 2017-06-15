@@ -1,0 +1,17 @@
+{
+  "name": "mardumshumari",
+  "version": "0.0.1",
+  "description": "a app for make a mardum shumari in your area",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ghulkam Mustafa",
+  "license": "ISC",
+  "dependencies": {
+    "ajax-request": "*",
+    "express": "*",
+    "nodemon": "*"
+  }
+}
