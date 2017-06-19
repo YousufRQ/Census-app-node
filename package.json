@@ -1,0 +1,26 @@
+{
+  "name": "census-app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghulamMustafaRaza/Census-app-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghulamMustafaRaza/Census-app-node/issues"
+  },
+  "homepage": "https://github.com/ghulamMustafaRaza/Census-app-node#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
