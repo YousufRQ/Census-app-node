@@ -48,6 +48,7 @@ for (var i = 0; i < selectBoxes.length; i++) {
         break
     }
 }
+console.log(personData);
 $.post('http://localhost:3000/add',personData,function(res){
     massage.innerHTML = res[0];
     massage.style.color = res[1]==200?'green':'red';
