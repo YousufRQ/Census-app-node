@@ -9,7 +9,7 @@ var person      =   [];
 //     console.log(person)
 //     person = JSON.parse(data)
 //     console.log(person)
-    
+
 // } )
 
 function add(){
@@ -19,13 +19,13 @@ if(user.value == ''){
     massage.style.color = 'red';
 }else if(address.value == ''||address.value == undefined||address.value == null){
     massage.innerHTML = 'pls type address';
-    massage.style.color = 'red';    
+    massage.style.color = 'red';
 }else if(cnic.value == ''||cnic.value == undefined||cnic.value == null){
     massage.innerHTML = 'pls type CNIC';
-    massage.style.color = 'red';    
+    massage.style.color = 'red';
 }else if(phone.value == ''||phone.value == undefined||phone.value == null){
     massage.innerHTML = 'pls type phone';
-    massage.style.color = 'red';    
+    massage.style.color = 'red';
 }else{
 var personData = {name:null,address:null,phone:null,cnic:null,gender:null,profession:null};
 personData.cnic = cnic.value;
@@ -49,20 +49,15 @@ for (var i = 0; i < selectBoxes.length; i++) {
     }
 }
 $.post('http://localhost:3000/add',personData,function(res){
-    if(res){
-        massage.innerHTML = res;
-        massage.style.color = 'green';        
-    }else{
-        massage.innerHTML = 'There is Look Like Error'
-        massage.style.color = 'red';
-    }
+    massage.innerHTML = res[0];
+    massage.style.color = res[1]==200?'green':'red';
 })
     // person.push(personData);
     // console.log(person)
-    
+
     // // localStorage.person = JSON.stringify(person);
     // massage.innerHTML = 'Submitted';
-    // massage.style.color = 'green'; 
+    // massage.style.color = 'green';
 };
 console.log(personData);
 }
@@ -105,7 +100,7 @@ function rander(){
 }
 function delet(obj){
     console.log(obj)
-    
+
  $.post('http://localhost:3000/splic',{ind: obj},function(res){
     console.log('res')
     rander();
